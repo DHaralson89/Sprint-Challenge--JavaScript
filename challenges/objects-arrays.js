@@ -22,7 +22,7 @@ const dino = {
   length: '12m',
   period: 'Late Cretaceous'
 };
-console.log("7000kg");
+console.log(dino.weight);
 
 // What was the diet of a velociraptor?
 const dino2 = {
@@ -32,7 +32,7 @@ const dino2 = {
   length: '1.8m',
   period: 'Late Cretaceous'
 };
-console.log("carnivorous");
+console.log(dino2.diet);
 
 // How long was a stegosaurus?
 const dino1 = {
@@ -42,14 +42,17 @@ const dino1 = {
   length: '9m',
   period: 'Late Jurassic'
 };
-console.log("9m");
+console.log(dino1.length);
 
 // What time period did tyrannosaurus live in?
-console.log("Late Cretaceous");
+console.log(dino.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(`RAWERSRARARWERSARARARRRR!`);
+dino.roar = function(){
+  return "RAWERSRARARWERSARARARRRR!";
+}
+console.log(dino.roar());
 
 
 // ==== Arrays ====
@@ -91,13 +94,13 @@ for(grad in graduates){
 }
 console.log(contactInfo);
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = [];
- for(grad in graduates) {        if(graduates[grad].university.match('unisWithUni')) {
-   uni.push(graduates[grad].university);
+const uni = [];
+for (let i = 0; i < graduates.length; i++) {
+  if (graduates[i].university.includes('Uni')) {
+    uni.push(graduates[i].university);
   }
-}
-console.log(unisWithUni);
-
+};
+console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
